@@ -80,13 +80,16 @@ WSGI_APPLICATION = 'cuyproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'DEMO_TEST',
-        'USER': 'postgres',
-        'PASSWORD': 'holamundo',
-        'HOST': 'localhost',
+        'NAME': 'd6s9ubcl58g772',
+        'USER': 'wqjacrjzcwdebg',
+        'PASSWORD': '6e31be504d771d6822c1df8514f9a0091b6c31d624b7cdb9de32e41e699f5dd7',
+        'HOST': 'ec2-18-215-111-67.compute-1.amazonaws.com',
         'PORT': '5432'
     }
 }
+#import dj_database_url
+#db_from_env = dj_database_url.config(conn_max_age=600)
+#DATABASES['default'].update(db_from_env)
 
 
 # Password validation
