@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from .serializers import CuySerializer
+from .models import Cuy
 # Create your views here.
 @api_view(['GET'])
 def index(request):
@@ -13,3 +15,8 @@ def index(request):
         'Delete': '/cuy-delete/<str:pk>',
     }
     return Response(cuy_urls)
+@api_view(['GET'])
+def cuyList(request):
+    cuyes = Cuy.objects.all()
+    serializer = CuySerializer(cuyes, many=True)
+    return Response(serializer.data)

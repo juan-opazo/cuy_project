@@ -1,3 +1,4 @@
 django
 psycopg2
 djangorestframework
+dj-database-url==0.5.0
