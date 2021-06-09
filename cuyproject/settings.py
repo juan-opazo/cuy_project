@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'cuyproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd6s9ubcl58g772',
-        'USER': 'wqjacrjzcwdebg',
-        'PASSWORD': '6e31be504d771d6822c1df8514f9a0091b6c31d624b7cdb9de32e41e699f5dd7',
-        'HOST': 'ec2-18-215-111-67.compute-1.amazonaws.com',
+        'NAME': 'dbek7bmalko634',
+        'USER': 'mbtlmgjsxkllvd',
+        'PASSWORD': '52f428bf81682dd86e82956bd8a1657ef25d7f40d91b46fc6754e1e415645347',
+        'HOST': 'ec2-52-87-107-83.compute-1.amazonaws.com',
         'PORT': '5432'
     }
 }

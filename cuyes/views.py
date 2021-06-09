@@ -20,3 +20,15 @@ def cuyList(request):
     cuyes = Cuy.objects.all()
     serializer = CuySerializer(cuyes, many=True)
     return Response(serializer.data)
+
+def home(request):
+    return render(request, "cuyes/home.html")
+
+def nosotros(request):
+    return render(request, "cuyes/nosotros.html")
+
+def tienda(request):    
+    return render(request, "cuyes/tienda.html")
+
+def contacto(request):
+    return render(request, "cuyes/contacto.html")
