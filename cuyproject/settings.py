@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'cuyes.apps.CuyesConfig',
+    'pozas.apps.PozasConfig',
 
     'rest_framework',
 ]
@@ -79,12 +81,14 @@ WSGI_APPLICATION = 'cuyproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dbek7bmalko634',
-        'USER': 'mbtlmgjsxkllvd',
-        'PASSWORD': '52f428bf81682dd86e82956bd8a1657ef25d7f40d91b46fc6754e1e415645347',
-        'HOST': 'ec2-52-87-107-83.compute-1.amazonaws.com',
-        'PORT': '5432'
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'dbek7bmalko634',
+        # 'USER': 'mbtlmgjsxkllvd',
+        # 'PASSWORD': '52f428bf81682dd86e82956bd8a1657ef25d7f40d91b46fc6754e1e415645347',
+        # 'HOST': 'ec2-52-87-107-83.compute-1.amazonaws.com',
+        # 'PORT': '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 #import dj_database_url
